@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "374e993f6252642f",
+        "id": "70afd4553040c621",
         "type": "tabs",
         "children": [
           {
-            "id": "2d3a0134de303c9f",
+            "id": "b19c994e3baf9619",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -18,8 +18,33 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "6c2524d4372dc033",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Teoria/Introduzione.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "00d9770763db90e7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Esercizi/Sintassi MatLab.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -85,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Teoria/Introduzione.md",
+                "file": "Esercizi/Sintassi MatLab.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Teoria/Introduzione.md",
+                "file": "Esercizi/Sintassi MatLab.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Teoria/Introduzione.md"
+                "file": "Esercizi/Sintassi MatLab.md"
               }
             }
           }
@@ -146,10 +171,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bd20fc275ffb1431",
+  "active": "b185c912529dc146",
   "lastOpenFiles": [
+    "Teoria/Introduzione.md",
+    "Esercizi/Sintassi MatLab.md",
+    "Teoria/Errori di rappresentazione.md",
+    "Untitled.canvas",
+    "2023-03-01.md",
     "Esercizi",
-    "Teoria",
-    "Teoria/Introduzione.md"
+    "Teoria"
   ]
 }

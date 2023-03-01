@@ -13,7 +13,6 @@ La soluzione numerica è calcolabile -> numero reale
 
 
 
-
 # Algoritmi numerici
 > Gli **algoritmi numerici** sono algoritmi che, a partire da dati in ingresso, produce un insieme di risultati, mediante passi finiti
 
@@ -85,8 +84,16 @@ Letteralmente *a virgola mobile*: $\alpha = \pm m * \beta^{e}$
 L'insieme dei numeri floating point è: $F(\beta, t, L, U)$
 - insieme discreto e finito di numeri reali
 - t è il numero di cifre adibito alla rappresentazione della mantissa
+- L - lower exp
+- U - upper exp
 
 Il numero sarà rappresentato come: $\pm (0.c_1 c_2 ... c_t) * \beta^{r}$
 
 In base binaria ($\beta = 2$) la prima cifra ha senso che sia 1, per guadagnare un bit -> t cifre esplicite, t+1 cifre totali, di cui 1 implicita (ovvero $c_1$, con ultima cifra $c_{t+1}$)
 
+## Casi limite underflow e overflow
+Con i numeri reali (floating point):
+- molto vicini a zero (in valore assoluto) -> memorizzo zero
+- sopra il massimo numero rappresentabile (in negativo o in positivo) -> memorizzo `+inf` o `-inf`
+
+Con i numeri naturali rinizio in modo circolare.
