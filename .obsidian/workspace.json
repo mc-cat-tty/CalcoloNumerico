@@ -42,9 +42,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "4b4bec8973dac567",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Teoria/Concetti di analisi versione numerica.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -110,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Teoria/Richiami di algebra e algoritmi.md",
+                "file": "Teoria/Concetti di analisi versione numerica.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Teoria/Richiami di algebra e algoritmi.md",
+                "file": "Teoria/Concetti di analisi versione numerica.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Teoria/Richiami di algebra e algoritmi.md"
+                "file": "Teoria/Concetti di analisi versione numerica.md"
               }
             }
           }
@@ -171,11 +183,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "00d9770763db90e7",
+  "active": "4b4bec8973dac567",
   "lastOpenFiles": [
-    "Teoria/Errori di rappresentazione.md",
-    "Esercizi/Sintassi MatLab.md",
     "Teoria/Richiami di algebra e algoritmi.md",
+    "Teoria/Concetti di analisi versione numerica.md",
+    "Teoria/Errori di rappresentazione.md",
+    "Esercizi/Derivata numerica.md",
+    "Esercizi/Sintassi MatLab.md",
     "Teoria/Introduzione.md",
     "Untitled.canvas",
     "2023-03-01.md",

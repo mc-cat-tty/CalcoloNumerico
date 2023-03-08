@@ -52,5 +52,54 @@ Riavvolgendo il conto diventa: n * n-1 * ... * 1
 
 >Calcolare il determinante di una matrice con la definizione costa **n!**
 
+## Proprietà
+TODO: PROPRIETÀ DETERMINANTE E MODULO NUMERI COMPLESSI
 
+# Autovalori
+>Data $A\in \mathbb{R}^{n*n}$, $x\in \mathbb{C}^n$ vettore diverso da zero e uno scalare $\lambda \in \mathbb{C}$ sono (rispettivamente) autovettore e autovalore di A se: $Ax=\lambda x$
 
+**Condizione operativa**:
+Soluzioni dell'equazione $det(A-\lambda I)=0$
+Il membro sx è il *polinomio caratteristico* di A
+
+## Proprietà
+- $det(A) = \lambda_1 \lambda_2 ...  \lambda_n$
+- Una matrice è invertibile se tutti i suoi autovalori sono NON nulli
+- Se A invertibile e $\lambda$ suo autovalore => $\frac{1}{\lambda}$ autovalore di $A^{-1}$
+- Se A simmetrica ($A = A^T$) => tutti gli autovalori sono reali
+
+TODO: RAGGIO SPETTRALE
+
+# Norma
+## Norma vettoriale
+Dato un vettore in $\mathbb{R}^n$ è un valore in $\mathbb{R}$ non negativo indicatore della grandezza degli elementi nel vettore (indip dal segno).
+
+Cosa vogliamo?
+- se vettore a componenti nulle -> zero
+- se moltiplico il vettore per k o -k -> norma_vettore * k
+- deve valere la proprietà triangolare (un lato di un triangolo minore o uguale della somma degli altri due) -> infatti la somma vettoriale equivale a pensare che due vettori formino due lati di un triangolo e il terzo sia il vettore che congiunge gli estremi degli altri due
+
+TODO: RICHIESTE IN LINGUAGGIO MATEMATICO
+
+Va bene qualsiasi funzione che rispetti queste 3 caratteristiche ($\|\cdot\|_{*}$):
+1. **Norma $\infty$**: $\|x\|_{\infty} = max_{i=1, ..., n}{\|x_i\|}$
+2. **Norma 1**: $\|x\|_1=\sum_{i=1}^{n}{|x_i|}$
+3. **Norma 2 (Euclidea)**: $\|x\|_2=\sqrt{\sum_{i=1}^{n}{|x_i|^2}}$
+
+### Proprietà
+- Elevando Norma 2 al quadrato si ottiene: $\|x\|_2^2=x_1^2+x_2^2+...+x_n^2=x^Tx$ con _x_ vettore colonna (la nostra unità elementare)
+- TODO: SECONDA PROPRIETÀ
+
+## Norma matriciale
+Richiediamo le stesse caratteristiche della norma vettoriale.
+
+Vogliamo uno strumento che fissata la matrice A ci dia la grandezza degli elementi di $A\in\mathbb{R}^{n*n}$.
+
+Idea: moltiplico A per ogni possibile vettore di $\mathbb{R}^n$, calcolo la norma, divido per la norma del vettore scelto. Tra tutti prendo il valore più grande ottenuto da questo rapporto.
+
+Possibili norme:
+- **Norma $\infty$**: sommo i valori di ogni riga, ottengo un vettore, prendo il massimo.
+- **Norma 1**: sommo i valori di ogni colonna, ottengo un vettore, prendo il massimo
+- **Norma 2 (Euclidea)**: norma 2 al quadrato è il raggio spettrale della matric eper la matrice trasposta $\|A\|_2=\sqrt{\rho(A*A^T)}$
+
+TODO: finisci possibili norme
