@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Esercizi/Sintassi MatLab.md",
+                "file": "Teoria/Richiami di algebra e algoritmi.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Esercizi/Sintassi MatLab.md",
+                "file": "Teoria/Richiami di algebra e algoritmi.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Esercizi/Sintassi MatLab.md",
+                "file": "Teoria/Richiami di algebra e algoritmi.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Esercizi/Sintassi MatLab.md"
+                "file": "Teoria/Richiami di algebra e algoritmi.md"
               }
             }
           }
@@ -171,11 +171,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bd20fc275ffb1431",
+  "active": "00d9770763db90e7",
   "lastOpenFiles": [
-    "Teoria/Introduzione.md",
-    "Esercizi/Sintassi MatLab.md",
     "Teoria/Errori di rappresentazione.md",
+    "Esercizi/Sintassi MatLab.md",
+    "Teoria/Richiami di algebra e algoritmi.md",
+    "Teoria/Introduzione.md",
     "Untitled.canvas",
     "2023-03-01.md",
     "Esercizi",
