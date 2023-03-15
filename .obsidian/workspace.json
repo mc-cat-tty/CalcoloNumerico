@@ -25,14 +25,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Esercizi/Programmazione MatLab.md",
+                "file": "Teoria/Condizionamento.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "841fa41f07321b2f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Teoria/Risoluzione sistemi lineari.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Esercizi/Programmazione MatLab.md",
+                "file": "Teoria/Risoluzione sistemi lineari.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Esercizi/Programmazione MatLab.md",
+                "file": "Teoria/Risoluzione sistemi lineari.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Esercizi/Programmazione MatLab.md"
+                "file": "Teoria/Risoluzione sistemi lineari.md"
               }
             }
           }
@@ -159,16 +171,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2016e147aa8b970f",
+  "active": "841fa41f07321b2f",
   "lastOpenFiles": [
+    "diag_solver.m",
+    "Esercizi/diag_solver.m",
+    "Teoria/Richiami di algebra e algoritmi.md",
+    "Teoria/Errori di rappresentazione.md",
+    "Teoria/Risoluzione sistemi lineari.md",
     "Teoria/Condizionamento.md",
+    "Teoria/Concetti di analisi versione numerica.md",
     "Esercizi/Programmazione MatLab.md",
     "Teoria/Images/vettore_grafico.png",
     "Teoria/Images",
-    "Teoria/Concetti di analisi versione numerica.md",
-    "Teoria/Richiami di algebra e algoritmi.md",
     "Teoria/Introduzione.md",
-    "Teoria/Errori di rappresentazione.md",
     "Esercizi/Derivata numerica.md",
     "Esercizi/Sintassi MatLab.md",
     "Untitled.canvas",

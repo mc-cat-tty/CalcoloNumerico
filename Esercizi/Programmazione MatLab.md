@@ -58,3 +58,4 @@ end
 - `&` and logico
 - `|` or logico
 - `~` not logico
+

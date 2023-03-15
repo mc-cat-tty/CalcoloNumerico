@@ -1,0 +1,58 @@
+Un sistema in forma matriciale si scrive:
+$Ax = b$
+In cui _A_ è una matrice quadrata nxn, mentre _x_ e _b_ sono vettori colonna. _A_ e _b_ sono determinati (contengono valori numerici), mentre x contiene delle incognite.
+
+La soluzione è quindi $x=A^{-1}b$ con il **metodo dell'inversa**
+Ricorda: moltiplica in modo coerente con l'ordine dei fattori.
+
+Calcolare l'inversa richiede il calcolo del determinante, che necessita $n!$ operazioni: $\frac{1}{det(A)}A^{\#t}$
+Dove $A^{\#t}$ è la matrice trasposta dei complementi algebrici di A
+
+Vedi: esempio di risoluzione $7x = 21$ con due algoritmi differenti
+
+# Sistemi di facile risoluzione
+
+## Sistema "banale"
+$I\begin{pmatrix} x_{1} \\ x_{2} \\ ... \\ x_{n}  \end{pmatrix} = \begin{pmatrix} b_{1} \\ b_{2} \\ ... \\ b_{n}  \end{pmatrix}$
+
+Questo sistema non richiede praticamente soluzione, è equivalente a: $\begin{equation} \begin{cases} x_1 = 2 \\ x_2 = 1 \\ ... \\ x_n = 5 \end{cases} \end{equation}$
+
+## Sistema diagonali
+Dato il seguente sistema:
+$\begin{equation} \begin{cases} d_1x_1 = 2 \\ d_2x_2 = 1 \\ ... \\ d_nx_n = 5 \end{cases} \end{equation}$
+
+Scritto come $Dx=b$, dove D è una matrice diagonale (solo coeff sulla diagonale principale), può essere risolto in O(n) -> n divisioni
+
+$x_i = \frac{b_i}{d_i} \quad \forall i=1,...,n$
+
+## Sistemi triangolari
+$\begin{equation} \begin{cases} 2x_1=6 \rightarrow x_1 = 3 \\ 3x_1+x_2=5 \rightarrow x_2 = 5 - (3*3) = -4 \\ x_1-3x_2+\frac{1}{2}x_3 = 4 \\ x_1 + 2x_2+\frac{1}{2}x_3 - x_4 = 0 \end{cases} \end{equation}$
+
+Si risolve facilmente con una **sostituzione in avanti**
+
+$\begin{pmatrix} a_{11} & 0 & ... & 0 \\ a_{21} & a_{22} & ... & 0 \\ \vdots & \vdots & \vdots \\ a_{n1} & a_{n2} & ... & a_{nn} \\ \end{pmatrix} \begin{pmatrix} x_{1} \\ x_{2} \\ ... \\ x_{n}  \end{pmatrix} = \begin{pmatrix} b_{1} \\ b_{2} \\ ... \\ b_{n}  \end{pmatrix}$
+
+La matrice A è una matrice triangolare inferiore
+
+$x_i = \frac{1}{a_{ii}}(b_i - \sum^{i-1}_{j=i}a_{ij}x_{j})$
+
+Costo intorno a $n^2$ -> sempre meglio di calcolare l'inversa
+
+Nel caso di una matrice triangolare superiore:
+TODO: sistema generico con A triangolare superiore
+
+Soluzione: $x_i = \frac{1}{a_{ii}}(b_i - \sum^{n}_{j=i+1}a_{ij}x_{j})$
+
+# Implementazione Matlab
+Dati $a, b$ rispettivamente matrice 1xn e nx1, abbiamo che:
+- $a*b = c$ di dimensione 1x1
+- $b*a = M$ di dimensione nxn
+
+Vedi:
+- `D = diag(d)` -> crea una matrice diagonale D a partire da un vettore colonna d
+- `d = diag(D)` -> estrae la matrice 
+- `istril`
+![[diag_solver.m]]
+
+Verifica soluzione: $Az=b$ con $z$ soluzione
+
