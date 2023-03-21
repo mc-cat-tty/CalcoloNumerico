@@ -228,3 +228,55 @@ Per arrivare a $U_1U_2^{-1}=L_1^{-1}L_2$ => l'unico modo per cui valga questa ug
 
 #Vedi: gruppo (algebra) -> prodotto tra due numeri pari è un numero pari
 
+## Classi di matrici che soddisfano le ipotesi del teorema di fattorizzazione
+>Per le matrici a **diagonale dominante** (per righe o per colonne) vale la proprietà che i minori principali sono diversi da zero (implicazione), quindi sono risolvibili con l'algoritmo di Gauss.
+
+>Una matrice è **diagonale dominante** se $\sum^n_{j=1, j\neq i}{|a_{ij}|} < |a_{ii}|$. Esempio: matrice identità o più in generale una qualsiasi matrice diagonale.
+
+Come faccio ad ottenere una matrice di questo tipo?
+
+### Strategia di pivoting
+Scambio le righe per ottenere una matrice diagonale dominante -> devo ricordarmi di scambiare la posizione dei termini noti (vettore $b$)
+
+Scambierò sempre una riga con una che le sta sotto (TODO: formalizza)
+
+### Matrici di permutazione elementare
+Scambio banale di righe = scambiare una riga con se stessa
+
+>Lo scambio non banale di due righe di una matrice può essere espresso come un prodotto matriciale tra la matrice originale e una **matrice di permutazione elementare**
+
+Una matrice di permutazione elementare $P_{ij}$ -> matrice identità in cui in posizione _ij_ e _ji_ è presente un 1, mentre in $ii$ e $jj$ è presente uno zero => riga i e j scambiate a partire da $I$
+
+Se moltiplico a destra ottengo uno scambio di colonne
+
+#### Proprietà
+- **non singolari**: $det(P_{ij}) = -det(I) = -1$ perchè il segno viene invertito ad ogni scambio non banale di righe e colonne
+- **simmetriche**: $P_{ij}=P_{ij}^T$
+- **ortogonali**: $P_{ij}P_{ij}^T = P_{ij}P_{ij} = I$ perchè è come se venisse fatto un doppio scambio di riga, fino a ricondursi a $I$
+
+Moltiplicando matrici di permutazione elementari otteniamo nuovamente una matrice di permutazione (che scambia più righe/colonnne tra loro).
+
+### Scambio di righe nella fattorizzazione di Gauss
+Supposta $A=A_1$ non invertibile, allora la prima riga avrà sicuramente almeno 1 elemento diverso da zero -> posso scambiarlo con la prima riga.
+
+Al passaggio successivo: $A_2=L_1P_1A_1$ quindi dal teorema di binet: $det(A_2)=det(L_1)det(P_1)det(A_1)=1*-1*det(A_1)$ con $det(A_1) \neq 0$ sicuramente dal passo precedente e quindi $det(A_2) \neq 0$
+
+Dall'ipotesi $det(A) \neq 0$ => $PA = LU$ dove P è una matrice nota
+$PAx=LUx=Pb$ se si parte dal sistema $Ax = b$
+
+Come cambia il determinante di A? Fatti $\sigma$ scambi, ho che $det(A)=(-1)^\sigma u_{11} ... u_{nn}$
+
+TODO: vedi slide 209 -> nella produttoria ci sono le matrici di permutazione che riassumono gli scambi fatti dal passo successivo al k-esimo, perchè gli altri sono già "intrinseci" nella matrice $L_k$
+
+### Osservazioni
+Il modo in cui effettuo gli scambi di righe influisce sulla stabilità dell'algoritmo di Gauss.
+
+Nella k-esima sottocolonna ho il coefficiente $-\frac{a_{ik}}{a_{jk}}$, dove $a_{jk}$ è il pivot. Se mantengo $a_{jk}$ il più grande possibile, otterrò un coeff piccolo, che mi riduce l'errore di approsimazione in virgola mobile. In particolare scelgo $a_{rk}^{(k)} = max_{i \in \{k, ..., n\}} |a_{ik}^{(k)}|$, così da mantenere $|m_{ik}| \leq 1$, contenendo l'errore.
+
+TODO: vedi esempio numerico
+
+Conclusione: con le tecniche di pivoting parziale posso aumentare la stabilità dell'algoritmo.
+
+#Salta: pivoting totale, fattorizzazione per colonne, matrici a banda, matrici sparse: 217-225
+
+## Matrici simmetriche
