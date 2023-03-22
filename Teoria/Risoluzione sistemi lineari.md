@@ -279,4 +279,10 @@ Conclusione: con le tecniche di pivoting parziale posso aumentare la stabilità 
 
 #Salta: pivoting totale, fattorizzazione per colonne, matrici a banda, matrici sparse: 217-225
 
+![[fattorizza.m]]
+
+![[fattorizza_pivoting.m]]
+
+Nota: il _~_ ignora il valore di ritorno
+
 ## Matrici simmetriche
