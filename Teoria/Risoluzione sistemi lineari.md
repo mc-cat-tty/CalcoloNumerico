@@ -285,4 +285,44 @@ Conclusione: con le tecniche di pivoting parziale posso aumentare la stabilità 
 
 Nota: il _~_ ignora il valore di ritorno
 
-## Matrici simmetriche
+# Matrici simmetriche
+## Caratteristica
+$a_{ij} = a_{ji}$, quindi la matrice è uguale alla sua trasposta ($A = A^T$)
+
+Memorizzare una matrice simmetrica richiede la metà dello spazio rispetto a memorizzare l'intera matrice.
+
+## Teorema di fattorizzazione di gauss per matrici simmetriche
+Hp:
+- A simmetrica
+- Tutti i minori principali diversi da zero
+
+Th: esistono L (triangolare inferiore con diagonale unitaria) e D (diagonale = solo gli elementi sulla diagonale diversi da zero) tali che $A = L D L^T$
+
+Dim:
+- $A = LU$ dal teorema di Gauss dato che ha i minori principali diversi da zero
+- D è una matrice diagonale con elementi $u_{ij}$ (diagonale di U) tutti diversi da zero -> non singolare ( #TODO: scrivi matrice esplicita)
+- Riscriviamo la fattorizzazoine $A=LDD^{-1}U$
+- Ci chiediamo se $D^{-1}U$ è uguale a $L^T$
+- Chiamiamo $R$ il prodotto $D^{-1}U$ -> $R \coloneqq D^{-1}U$
+- Moltiplicando due matrici triangolari superiori tra loro si riottiene una matrice triangolare, stessa cosa per le matrici diagonali, ecc. perchè appartengono allo stesso **gruppo** ( #vedi: gruppo algebrico, teoria dei gruppi)
+- Cosa contiene $D^{-1}$? $\begin{pmatrix} \frac{1}{u_{11}} & \dots & 0 \\ 0 & \frac{1}{u_22} & \dots & 0 \\ 0 & 0 & \frac{1}{u_33} & \dots & 0 \\ 0&0&0& \ddots &0 \\ 0&0&0&0& \frac{1}{u_{nn}}\end{pmatrix}$ perchè moltiplicata per $D$ deve dare l'identità
+- Quindi moltiplicata per $U$ restituisce una diagonale triangolare superiore
+- È vero che la diagonale è unitaria nel prodotto tra le due, perchè gli elementi di D sono estratti da U ( #todo: esplicita )
+- Dato che $A$ è simmetrica vale che $A = LDR = A^T = (LDR)^T = R^T D^T L^T$
+	- $LDR = R^T D L^T$
+	- Moltiplico ambo i membri per $(L^T)^{-1}$: $LDR(L^T)^{-1} = R^TDL^T(L^T)^{-1}$
+	- Moltiplico a sinistra per $L^{-1}$ => $DR(L^T)^{-1} = L^{-1}R^TD$
+- I gruppi algebrici sono chiusi anche rispetto all'inversione: a sinistra abbiamo una triangolare superiore, a destra una triangolare inferiore, quindi i due membri devono dare entrambi matrici diagonali
+- Il membro sinistro è diagonale: $DR(L^T)^{-1}$, $D$ è diagonale per definizione => $R(L^T)^{-1}$ deve essere diagonale
+- Prima abbiamo dimostrato che $R$ ha diagonale unitaria (perchè prodotto di $D^{-1}$ per $U$), $L$ ha diagonale unitaria, di conseguenza anche $(L^{-1})^T$
+- $R(L^{-1})^T$ è diagonale con diagonale unitaria, quindi è $I$
+- L'operazione di inversione e trasposizione sono invertibili, quindi $(L^T)^{-1}=(L^{-1})^T$
+- $R(L^T)^{-1} L^T = I L^T$ => $R = L^T$
+- In conclusione: $A = LDL^T$
+
+## Risoluzione con il metodo di fattorizzazione di Gauss
+Ci aspettiamo un costo computazionale circa dimezzato.
+
+### Metodo di pavimentazione
+#TODO: vedi slide 228
+
