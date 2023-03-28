@@ -321,8 +321,57 @@ Dim:
 - In conclusione: $A = LDL^T$
 
 ## Risoluzione con il metodo di fattorizzazione di Gauss
-Ci aspettiamo un costo computazionale circa dimezzato.
+Ci aspettiamo un costo computazionale circa dimezzato, perchè il triangolo inferiore è uguale a quello superiore.
 
 ### Metodo di pavimentazione
+_Come i parchettisti che partono da un angolo e si estendono a tutto il pavimento/matrice_
+
 #TODO: vedi slide 228
 
+$$\begin{pmatrix} 1 & 0 & \dots & 0 \\ l_{21} & 1 & \dots & 0 \\ \vdots & \vdots & \ddots & \vdots & \\l_{n1} & l_{n2}  
+& \dots & 1 \end{pmatrix} \begin{pmatrix} d_{11} & 0 & \dots & 0 \\ 0 & d_{22} & \dots & 0 \\ \vdots & \vdots & \ddots & \vdots & \\0 & 0 & \dots & d_{n  
+n} \end{pmatrix} \begin{pmatrix} 1 & l_{21} & \dots & l_{n1} \\ 0 & 1 & \dots & l_{n2} \\ \vdots & \vdots & \ddots & \vdots & \\0 & 0  
+& \dots & 1 \end{pmatrix} $$
+
+#### Passo 1
+Calcoliamo la riga 1. Dobbiamo andare in ordine
+
+Partiamo con 
+
+#TODO: completa
+
+#### Pseudocodice
+```
+for j = 1, ..., n
+	d_{jj} = a_{jj} - \sum_{k=1}^{j-1}l_{jk}^2d_{kk}  % mi muovo sulla riga, nella sommatoria ci sono solo gli elementi calcolati fino a quel momento nella riga
+	for i = j+1, ..., n
+		l_{ij}
+```
+
+#TODO: finisci
+
+#### Costo computazionale
+Ad ogni passo $2(j-1)+(j-1)(n-j)$ prodotti
+
+#TODO: slide 232 (ottimizzazione e analisi costo)
+
+Costo: $O(\frac{n^3}{6})$ contro a $O(\frac{n^3}{3})$ del metodo di Gauss per matrici generiche
+
+#Nota: ottimizza ulteriormente in termini di spazio memorizzando la matrice p nel triangolo superiore di l
+
+## Soluzione di sistema simmetrico
+Partiamo da $Ax = b$, che fattorizzato diventa $LDL^Tx = b$
+
+Chiamando $z = DL^Tx$ e $y = L^Tx$
+
+$$\begin{cases} Lz = b \\ Dy = z \\ L^Tx=y \end{cases}$$
+
+Come in una matrioska -> devo risolvere le equazioni in ordine dalla prima all'ultima. Inizialmente conosco solo L e b, calcolo z e ho D, calcolo y e ho $L^T$, trovo x.
+In ordine uso i seguenti metodi:
+1. Sostituzione in avanti
+2. n divisioni: $z_{ii} / D_{ii}$
+3. Sostituzione all'indietro
+
+#Nota: in Matlab una matrice simmetrica si può creare con `tril(A) + tril(A, -1)'`
+
+![[fattorizza_simm.m]]

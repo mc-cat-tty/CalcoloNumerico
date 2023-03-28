@@ -143,7 +143,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -159,8 +159,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2016e147aa8b970f",
+  "active": "b185c912529dc146",
   "lastOpenFiles": [
+    "Esercizi/fattorizza_simm.m",
+    "fattorizza_simm.m",
     "Teoria/Condizionamento.md",
     "fattorizza_pivoting(1).m.md",
     "Teoria/Risoluzione sistemi lineari.md",
@@ -182,7 +184,6 @@
     "Esercizi/Sintassi MatLab.md",
     "Untitled.canvas",
     "2023-03-01.md",
-    "Esercizi",
-    "Teoria"
+    "Esercizi"
   ]
 }
