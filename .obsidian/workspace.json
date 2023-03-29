@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Teoria/Condizionamento.md",
+                "file": "Teoria/Risoluzione sistemi lineari.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -159,11 +158,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b185c912529dc146",
+  "active": "4f7aa1ceae32106d",
   "lastOpenFiles": [
+    "Teoria/Condizionamento.md",
     "Esercizi/fattorizza_simm.m",
     "fattorizza_simm.m",
-    "Teoria/Condizionamento.md",
     "fattorizza_pivoting(1).m.md",
     "Teoria/Risoluzione sistemi lineari.md",
     "Esercizi/fattorizza_pivoting.m",
@@ -183,7 +182,6 @@
     "Esercizi/Derivata numerica.md",
     "Esercizi/Sintassi MatLab.md",
     "Untitled.canvas",
-    "2023-03-01.md",
-    "Esercizi"
+    "2023-03-01.md"
   ]
 }

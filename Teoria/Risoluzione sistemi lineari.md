@@ -375,3 +375,70 @@ In ordine uso i seguenti metodi:
 #Nota: in Matlab una matrice simmetrica si può creare con `tril(A) + tril(A, -1)'`
 
 ![[fattorizza_simm.m]]
+
+
+# Fattorizzazione di Cholesky per matrici simmetriche definite
+## Vantaggi
+- Algoritmo stabile
+- Non dobbiamo verificare la simmetricità della matrice (?)
+
+## Ipotesi
+1. $\forall x \in \mathbb{R}^n: x^TAx \geq 0$
+2. $x^TAx=0 \Leftrightarrow x=0$
+
+#TODO: completa con slide 233/234 (idk)
+
+Le ipotesi sono le stesse della fattorizzazione di Gauss per matrici simmetriche.
+
+## Tesi
+>Una matrice simmetrica $A$ di dimensione $n*n$ è definita positiva $\Longleftrightarrow$ esiste una matrice triangolare inferiore $\lambda$  con elementi diagonali positivi tali che $A=\lambda\lambda^T$
+
+Ad esempio: Matlab inizia la fattorizzazione di Cholesky e, se fallisce, significa che la matrice non è simmetrica positiva, quindi arresta la fattorizzazione. Altrimenti ci si ritrova con la matrice A fattorizzata.
+
+#Nota: è un se e solo se, quindi doppia implicazione. La useremo nella direzione $A=\lambda\lambda^T$ -> simmetrica -> fattorizzazione di Gauss
+
+## Dimostrazione
+### Dimostrazione implicazione 1: se simmetrica allora LL'
+Ipotesi:
+1. $A=A^T$ per la simmetria
+2. Tutti i minori diversi da zero perchè definita positiva => $A=LDL^T$
+
+Tesi:
+1. Esiste $\lambda$ triangolare inferiore $n*n$
+2. $\lambda$ ha diagonale > 0
+3. $A=\lambda\lambda^T$
+
+Dim:
+- $\forall x \in \mathbb{R}_{-0}: x^tAx > 0$ => riscritto $\forall x \in \mathbb{R}_{-0}: x^tLDL^Tx > 0$
+- Chiamiamo $y=L^Tx$ e $y^t = x^TL$ dato che $x$ supposto diverso da zero, L tirangolare inferiore quindi non zero, allora $y \neq 0$ (per avere il maggiore stretto)
+- $\forall x \in \mathbb{R}_{-0}: y^TDy>0$
+- Posto $D = \begin{pmatrix} d_{11} & 0 & \dots & 0 \\ 0 & d_{22} & \dots & 0 \\ \vdots & \vdots & \ddots & \vdots & \\0 & 0 & \dots & d_{nn} \end{pmatrix}$ sicuramente $d_{ii} > 0$ altrimenti non varrebbe la disuguaglianza sopra
+- Costruiamo $\lambda = L\Delta$ quindi $A=L\Delta\Delta^TL^T$ dove $\Delta\Delta^T = D$
+- $D = \begin{pmatrix} \sqrt{d_{11}} & 0 & \dots & 0 \\ 0 & \sqrt{d_{22}} & \dots & 0 \\ \vdots & \vdots & \ddots & \vdots & \\0 & 0 & \dots & \sqrt{d_{nn}} \end{pmatrix}$
+- #todo: vedi perchè D costruita così
+- Concluzione: abbiamo scritto $A$ come $A = \lambda\lambda^T$
+
+### Dimostrazione implicazione 2: se A fattorizzata LL' allora simmetrica
+Dimostriamo che A è positiva:
+- $A=\lambda\lambda^T$
+- $x\in\mathbb{R}^n$
+- $x^tAx = x^T\lambda\lambda^Tx$
+- Chiamando $y=x^T\lambda$
+- Per il trasposto vedi prima
+- $yy^T = y_1^2 + y_2^2 + \dots + y_n^2 = \|y\|_2^2$ sicuramente $\geq 0$
+
+Dimostriamo che A è simmetrica: $A^t = (\lambda\lambda^T)^t = \lambda\lambda^T = A$
+
+## Algoritmo di fattorizzazione di Cholesky
+$A=\lambda\lambda^T$ allora il generico elemento di $A$ vale
+- $\textit{l}_{jj} = \sqrt{d_{jj}}$ sulla diagonale
+- $\forall k = \{1, ..., j-1\}: \textit{l}_{jk} = l_{jk}\sqrt{d_{kk}}$ altrimenti
+
+Costo: $O=(\frac{n^3}{6})$ -> il costo computazionale non scende rispetto a Gauss per matrici simmetriche
+
+#TODO: pseudocodice e implementazione Matlab
+
+## Stabilità della fattorizzazione
+- se A definita positiva, gli elementi perno soddisfano già la proprietà del pivoting parziale. Ciò vuol dire che l'elemento sulla diagonale è già il più grande della sua sottocolonna. La matrice di permutazione non farebbe scambi. Più **stabile**.
+- A differenza della fattorizzazione di Gauss con pivoting totale o parziale, gli elementi di questa fattorizzazione sono maggiorati da elementi indipendenti dalla matrice -> **stabilità forte**
+- scopro se è simmetrica e definita positiva durante la fattorizzazione. Non sarebbe conveniente farlo prima (costa $\frac{n^2}{2}$)
