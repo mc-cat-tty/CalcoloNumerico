@@ -442,3 +442,6 @@ Costo: $O=(\frac{n^3}{6})$ -> il costo computazionale non scende rispetto a Gaus
 - se A definita positiva, gli elementi perno soddisfano già la proprietà del pivoting parziale. Ciò vuol dire che l'elemento sulla diagonale è già il più grande della sua sottocolonna. La matrice di permutazione non farebbe scambi. Più **stabile**.
 - A differenza della fattorizzazione di Gauss con pivoting totale o parziale, gli elementi di questa fattorizzazione sono maggiorati da elementi indipendenti dalla matrice -> **stabilità forte**
 - scopro se è simmetrica e definita positiva durante la fattorizzazione. Non sarebbe conveniente farlo prima (costa $\frac{n^2}{2}$)
+# Fattorizzazione QR
+#Vedi: slide 221-248 + nota 040423
+
