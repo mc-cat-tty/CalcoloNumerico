@@ -1,6 +1,7 @@
-function [x_zero] = bisection(a, b, f_handle, tau)
+function [x_zero, N] = bisection(a, b, f_handle, tau)
     % Test with -x^2 + 3x - 2 in [-1, 1.8]
-    N = log2((b-a) / tau) + 1;
+
+    N = ceil(log2((b-a) / tau));
     fa = feval(f_handle, a);
     % fb = feval(f_handle, b);
     for k = 1:N
