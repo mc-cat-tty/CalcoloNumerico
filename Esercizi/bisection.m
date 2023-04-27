@@ -5,7 +5,7 @@ function [x_zero, N] = bisection(a, b, f_handle, tau)
     fa = feval(f_handle, a);
     fb = feval(f_handle, b);
 
-    if fb + fa < 0
+    if fb + fa >= 0
         error("Passed function is not compliant to bisection conditions")
     end
 
