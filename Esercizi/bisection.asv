@@ -7,10 +7,7 @@ function [x_zero, N] = bisection(a, b, f_handle, tau)
 
     figure(1);
     hold on;
-    x_vector = linspace(a, b, 1000);
-    asse_x_imgs = zeros(1000);
-    plot(x_vector, asse_x_imgs, '_');
-    plot(x_vector, f_handle(x_vector), ':');
+    plot(linspace(0, 10, 50), f_handle(x_vector), ':');
     plot([0, 1, 2], [0, -1, 0.5], 'x');  % x line per (0, 0), (1, -1), (2, 0.5
     % close(1);
 
