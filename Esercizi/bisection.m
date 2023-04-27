@@ -3,7 +3,12 @@ function [x_zero, N] = bisection(a, b, f_handle, tau)
 
     N = ceil(log2((b-a) / tau));
     fa = feval(f_handle, a);
-    % fb = feval(f_handle, b);
+    fb = feval(f_handle, b);
+
+    if fb + fa < 0
+        error("Passed function is not compliant to bisection conditions")
+    end
+
     for k = 1:N
         m = (b - a) / 2 + a;
         fm = feval(f_handle, m);
