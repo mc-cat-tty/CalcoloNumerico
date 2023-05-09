@@ -1,5 +1,5 @@
 function [alpha] = vandermonde(x, y)
-    % suggestion: try with vandermonde(randi(100, 5, 1), randi(100, 5, 1))
+    % suggestion: try with vandermonde(rand(10, 1), rand(10, 1))
     [rx, cx] = size(x);
     [ry, cy] = size(y);
     assert(cx == 1);
@@ -15,8 +15,8 @@ function [alpha] = vandermonde(x, y)
     alpha = V \ y;
 
     % plotting
-    x_min = min(x) - min(x) / 4;
-    x_max = max(x) + max(x) / 4;
+    x_min = min(x);
+    x_max = max(x);
     x_samples = linspace(x_min, x_max);
     y_samples = polyval(flip(alpha), x_samples);
 
