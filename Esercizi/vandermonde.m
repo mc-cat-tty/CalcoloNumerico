@@ -7,8 +7,7 @@ function [alpha] = vandermonde(x, y)
     assert(rx == ry);
 
     n = length(x);
-    V = zeros(n);
-    V(:, 1) = ones(n, 1);
+    V = ones(n);
     for j=2:n
         V(:, j) = V(:, j-1) .* x;
     end
