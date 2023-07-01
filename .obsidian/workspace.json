@@ -4,34 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "8355ef669622ac06",
+        "id": "3037a018ed55a8b0",
         "type": "tabs",
         "children": [
           {
-            "id": "4f7aa1ceae32106d",
+            "id": "3a8e25302f8d0095",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Teoria/Risoluzione sistemi lineari.md",
+                "file": "Teoria/7. Risoluzione sistemi lineari con metodi iterativi.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "2016e147aa8b970f",
+            "id": "0a2ae194bd2debb8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Teoria/Risoluzione sistemi lineari.md",
+                "file": "Teoria/8. Risoluzione di sistemi generici.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -76,12 +77,20 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "99be0bed2689ba20",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 305.5
+    "width": 338.5
   },
   "right": {
     "id": "2df15ec3dd0c097f",
@@ -97,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Teoria/Risoluzione sistemi lineari.md",
+                "file": "Teoria/8. Risoluzione di sistemi generici.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Teoria/Risoluzione sistemi lineari.md",
+                "file": "Teoria/8. Risoluzione di sistemi generici.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,16 +146,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Teoria/Risoluzione sistemi lineari.md"
+                "file": "Teoria/8. Risoluzione di sistemi generici.md"
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 297.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -158,27 +167,31 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4f7aa1ceae32106d",
+  "active": "0a2ae194bd2debb8",
   "lastOpenFiles": [
-    "Teoria/Condizionamento.md",
+    "Teoria/7. Risoluzione sistemi lineari con metodi iterativi.md",
+    "Teoria/8. Risoluzione di sistemi generici.md",
+    "Esercizi/diag_solver.asv",
+    "Esercizi/iterative_gauss_seidel.m",
+    "Teoria/6. Risoluzione sistemi lineari con metodi diretti.md",
+    "Teoria/3. Condizionamento.md",
+    "Teoria/2. Errori di rappresentazione.md",
+    "Teoria/1. Introduzione.md",
+    "Teoria/5. Risoluzione sistemi lineari banali.md",
+    "Teoria/4. Richiami di algebra e algoritmi.md",
+    "README.md",
+    "Teoria/Concetti di analisi versione numerica.md",
     "Esercizi/fattorizza_simm.m",
     "fattorizza_simm.m",
     "fattorizza_pivoting(1).m.md",
-    "Teoria/Risoluzione sistemi lineari.md",
     "Esercizi/fattorizza_pivoting.m",
     "fattorizza_pivoting.m",
     "fattorizza_pivoting(1).m",
     "fattorizza.m",
     "Esercizi/fattorizza.m",
     "diag_solver.m",
-    "Esercizi/diag_solver.m",
-    "Teoria/Richiami di algebra e algoritmi.md",
-    "Teoria/Errori di rappresentazione.md",
-    "Teoria/Concetti di analisi versione numerica.md",
     "Esercizi/Programmazione MatLab.md",
     "Teoria/Images/vettore_grafico.png",
-    "Teoria/Images",
-    "Teoria/Introduzione.md",
     "Esercizi/Derivata numerica.md",
     "Esercizi/Sintassi MatLab.md",
     "Untitled.canvas",

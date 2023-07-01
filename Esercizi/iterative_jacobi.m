@@ -1,4 +1,5 @@
 function [x_next, k] = iterative_jacobi(x_corr, A, b, K_max, tau)
+% A deve essere invertibile (es. diagonale dominante)
 % x_corr (ovvero x0) random
 % K_max intorno a 10^3
 % tau intorno a 10^-2
