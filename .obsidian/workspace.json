@@ -4,35 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "3037a018ed55a8b0",
+        "id": "ead7a92ee051a37d",
         "type": "tabs",
         "children": [
           {
-            "id": "3a8e25302f8d0095",
+            "id": "ba1a8512935e97f3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Teoria/7. Risoluzione sistemi lineari con metodi iterativi.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0a2ae194bd2debb8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Teoria/8. Risoluzione di sistemi generici.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Teoria/8. Risoluzione di sistemi generici.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Teoria/8. Risoluzione di sistemi generici.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Teoria/8. Risoluzione di sistemi generici.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -167,13 +146,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0a2ae194bd2debb8",
+  "active": "ba1a8512935e97f3",
   "lastOpenFiles": [
     "Teoria/7. Risoluzione sistemi lineari con metodi iterativi.md",
+    "Teoria/6. Risoluzione sistemi lineari con metodi diretti.md",
     "Teoria/8. Risoluzione di sistemi generici.md",
     "Esercizi/diag_solver.asv",
     "Esercizi/iterative_gauss_seidel.m",
-    "Teoria/6. Risoluzione sistemi lineari con metodi diretti.md",
     "Teoria/3. Condizionamento.md",
     "Teoria/2. Errori di rappresentazione.md",
     "Teoria/1. Introduzione.md",
