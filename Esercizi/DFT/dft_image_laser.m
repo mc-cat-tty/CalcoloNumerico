@@ -1,8 +1,8 @@
 img = imread("ref.jpeg");
 img1D1 = imread("d1_1.jpeg") - img;
 img2D1 = imread("d1_2.jpeg") - img;
-imgD2 = imread("d2.jpeg") - img;
-imgs = {img1D1(:, : , 1), img2D1(:, :, 1), imgD2(:, :, 1)}; % filter red channel
+img3D2 = imread("d2.jpeg") - img;
+imgs = {img1D1(:, : , 1), img2D1(:, :, 1), img3D2(:, :, 1)}; % filter red channel
 l = length(imgs);
 figure(1);
 
@@ -42,7 +42,6 @@ for i=1:l
     xdata = zeros(h, w, 2);
     xdata(:, :, 1) = X;
     xdata(:, :, 2) = Y;
-    Z = D2GaussFunctionRot(x,xdata);
     [x, resnorm, residual, exitflag] = lsqcurvefit(@gauss2d_params, x0, xdata, logCompressedDft, lb, ub);
     params = x
 
