@@ -1,0 +1,35 @@
+% ORIGINAL COORDS
+u = 795;  % pixel
+v = 467;
+frame_pixels = [u; v; 1];
+
+% SCALING
+d = 2.7;  % distance object-camera
+
+% CAMERA DISTORSION
+fx = 241;  % pixel
+fy = 238;
+cx = 636;
+cy = 548;
+A = [fx 0 cx; 0 fy cy; 0 0 1];
+
+% ROTOTRANSLATION
+t = [0.500; 0.160; 1.140];  % translation in meters
+
+r = 100;  % deg
+p = 0;  % deg
+y = 90;  % deg
+
+% Rotation matrices
+Rr = [1 0 0; 0 cosd(r) -sind(r); 0 sind(r) cosd(r)];
+Rp = [cosd(p) 0 sind(p); 0 1 0; -sind(p) 0 cosd(p)];
+Ry = [cosd(y) -sind(y) 0; sind(y) cosd(y) 0; 0 0 1];
+
+R = Ry * Rp * Rr;  % rotation
+
+
+% WORLD COORDS RESULT
+res = inv(A) * frame_pixels;
+s = d / norm(res);  % Scaling factor
+
+res = R * (s .* res) + t
